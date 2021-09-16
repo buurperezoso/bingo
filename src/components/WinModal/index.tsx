@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { WinModalProps } from '../../interfaces/WinModal';
 import styles from './winModal.module.css';
 import Confetti from 'react-confetti';

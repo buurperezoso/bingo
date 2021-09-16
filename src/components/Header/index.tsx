@@ -26,7 +26,9 @@ const Header = ({ cards }: HeaderProps) => {
                 <button type="button" className='btn btn-primary' onClick={() => { generateCard() }}>Next Card!</button>
             </div>
             <div className={styles.cardSelected}>
-                <img src={`/images/${selectedCard?.image}`} alt={selectedCard?.name} className={styles.image} />
+                {
+                    selectedCard?.image && <img src={`/images/${selectedCard?.image}`} alt={selectedCard?.name} className={styles.image} />
+                }
                 <span>{selectedCard?.name}</span>
             </div>
 
