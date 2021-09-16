@@ -1,0 +1,16 @@
+.card {
+    width: 30rem;
+    height: 10rem;
+    border: 1px solid var(--grey);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+.card:hover {
+    border-color: blue;
+}
