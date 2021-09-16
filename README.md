@@ -13,7 +13,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `Overview`
 
-This Mexico themed bingo was created with ReactJS using Typescript, Lottie files and styled using css scoped in modules. It took 5hrs more-less, last hour was used mostly on adding the winning animation and testing. There were some dependencies not used due to the time limit, I went for a more simple but working approach.
+This Mexico themed bingo was created with ReactJS using Typescript and styled using css scoped in modules. This is the traditional way we play Bingo, we call it "Loteria". Hope it's interesting for you.
 
 ### `Running App`
 Open [https://bingo-fawn.vercel.app/](https://bingo-fawn.vercel.app/) to try it out.
