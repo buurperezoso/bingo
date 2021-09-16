@@ -12,7 +12,6 @@ const Header = ({ cards }: HeaderProps) => {
         const randomIndex = Math.floor(Math.random() * bingoCards.length);
         setSelectedCard(bingoCards[randomIndex]);
         const newCardsArray = removeItemFromArray(bingoCards, randomIndex);
-        console.log(newCardsArray)
         if (newCardsArray.length > 0) {
             setBingoCards(newCardsArray);
         } else {
