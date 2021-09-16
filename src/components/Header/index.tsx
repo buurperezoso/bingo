@@ -22,7 +22,10 @@ const Header = ({ cards }: HeaderProps) => {
 
     return (
         <div className={styles.header}>
-            <button type="button" className='btn btn-primary' onClick={() => { generateCard() }}>Next Card!</button>
+            <div className={styles.buttonContainer}>
+                <span>Mexican Themed Bingo!</span>
+                <button type="button" className='btn btn-primary' onClick={() => { generateCard() }}>Next Card!</button>
+            </div>
             <div className={styles.cardSelected}>
                 <span>{selectedCard?.name}</span>
             </div>
