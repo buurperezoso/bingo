@@ -1,13 +1,14 @@
 export interface CardProps {
-    id: string | number;
+    id: number;
     name: string;
-    isSelected: boolean;
+    isSelected?: boolean;
     rowIndex: number;
     colIndex: number;
     onClick(rowIndex: number, colIndex: number): any
 }
 
 export interface CardElement {
-    id: string | number;
+    id: number;
     name: string;
+    isSelected?: boolean;
 }

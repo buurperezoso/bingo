@@ -6,3 +6,7 @@ export const removeItemFromArray = (cardsArray: CardElement[], index: number) =>
     }
     return cardsArray;
 };
+
+export const findElementInArray = (indexValue: number, array: number[]) => {
+    return array.includes(indexValue);
+}
