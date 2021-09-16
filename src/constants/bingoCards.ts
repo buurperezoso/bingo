@@ -2,7 +2,7 @@ export const BINGO_CARDS = [
     {
         id: 1,
         name: "El valiente",
-        image: 'valinete.jpeg'
+        image: 'valiente.jpeg'
     },
     {
         id: 2,
@@ -158,42 +158,5 @@ export const BINGO_CARDS = [
         id: 34,
         name: "El cazo",
         image: 'cazo.jpeg'
-    },
-    // {
-    //     id: 35,
-    //     name: "El mundo",
-    // },
-    // {
-    //     id: 36,
-    //     name: "El apache",
-    // },
-    // {
-    //     id: 37,
-    //     name: "El nopal",
-    // },
-    // {
-    //     id: 38,
-    //     name: "El alacrán",
-    // },
-    // {
-    //     id: 39,
-    //     name: "La rosa",
-    // },
-    // {
-    //     id: 40,
-    //     name: "La calavera",
-    // },
-    // {
-    //     id: 41,
-    //     name: "La campana",
-    // },
-    // {
-    //     id: 42,
-    //     name: "El cantarito",
-    // },
-    {
-        id: 43,
-        name: "El pajaro",
-        image: 'pajaro.jpg'
     },
 ]
