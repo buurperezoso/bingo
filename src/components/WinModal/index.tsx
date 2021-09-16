@@ -1,25 +1,16 @@
-import { useEffect, useState } from 'react';
-import Lottie from 'react-lottie';
-import winAnimation from '../../assets/lotties/74668-win-animation.json';
+import { useEffect, useRef, useState } from 'react';
 import { WinModalProps } from '../../interfaces/WinModal';
 import styles from './winModal.module.css';
+import Confetti from 'react-confetti';
+import useScreenSize from '../../hooks/useScreenSize';
 
 const WinModal = ({ show, onRestart, showModal }: WinModalProps) => {
-
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: winAnimation,
-        rendererSettings: {
-            preserveAspectRatio: "xMidYMid slice"
-        }
-    };
-
+    const windowSize = useScreenSize();
     const [isShowing, setIsShowing] = useState(false);
 
     useEffect(() => {
         setIsShowing(show);
-    }, [show])
+    }, [show]);
 
     return (
         <>
@@ -27,12 +18,10 @@ const WinModal = ({ show, onRestart, showModal }: WinModalProps) => {
                 isShowing && (
                     <div className={styles.container}>
                         <div className={styles.subContainer}>
-                            {/* <Lottie
-                                options={defaultOptions}
-                                height={800}
-                                width={800}
-                                isClickToPauseDisabled={true}
-                            /> */}
+                            <Confetti
+                                width={windowSize?.width}
+                                height={windowSize?.height}
+                            />
                             <div className={styles.textAndButton}>
                                 <span className={styles.text}>YOU WON!</span>
                                 <div>

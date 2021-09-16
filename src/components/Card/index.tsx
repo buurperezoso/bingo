@@ -2,13 +2,13 @@ import styles from './card.module.css';
 import { CardProps } from '../../interfaces/Cards';
 import { useEffect, useState } from 'react';
 
-const Card = ({ name, rowIndex, colIndex, onClick, isSelected }: CardProps) => {
+const Card = ({ name, rowIndex, colIndex, onClick, isSelected, image }: CardProps) => {
 
     const [selected, setSelected] = useState(isSelected);
 
     useEffect(() => {
         setSelected(isSelected);
-    }, [isSelected])
+    }, [isSelected]);
 
     return (
         <div
@@ -16,6 +16,9 @@ const Card = ({ name, rowIndex, colIndex, onClick, isSelected }: CardProps) => {
             style={{ backgroundColor: selected ? '#969696' : 'none' }}
             onClick={() => onClick(rowIndex, colIndex)}
         >
+            {
+                image && <img src={`/images/${image}`} alt={name} className={styles.image} />
+            }
             <span>{name}</span>
         </div>
     )

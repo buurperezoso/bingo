@@ -26,7 +26,8 @@ const Home = () => {
                     (table[i][j] as CardElement) = {
                         id: 999,
                         name: 'Free',
-                        isSelected: true
+                        isSelected: true,
+                        image: ''
                     };
                 } else {
                     const randomIndex = Math.floor(Math.random() * cards.length);
@@ -168,7 +169,7 @@ const Home = () => {
                     return (
                         <div style={{ display: 'flex' }} key={rowIndex}>
                             {
-                                row.map(({ id, name, isSelected }: CardElement, colIndex: number) =>
+                                row.map(({ id, name, isSelected, image }: CardElement, colIndex: number) =>
                                     <Card
                                         key={id}
                                         id={id}
@@ -177,6 +178,7 @@ const Home = () => {
                                         rowIndex={rowIndex}
                                         colIndex={colIndex}
                                         onClick={(rowIndex, colIndex) => handleClick(rowIndex, colIndex)}
+                                        image={image}
                                     />
                                 )
                             }
