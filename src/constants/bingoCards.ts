@@ -2,7 +2,7 @@ export const BINGO_CARDS = [
     {
         id: 1,
         name: "El valiente",
-        image: 'valiente.jpeg'
+        image: 'valiente.jpg'
     },
     {
         id: 2,
