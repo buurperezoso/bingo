@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Card from "../../components/Card";
 import Header from "../../components/Header";
 import WinModal from "../../components/WinModal";
@@ -67,23 +67,24 @@ const Home = () => {
         }
     };
 
-    const handleWin = (tableCards: CardProps[][]) => {
-        const horizontal = handleHorizontalWin(tableCards);
-        const vertical = handleVerticalWin(tableCards);
-
-        if (horizontal) {
-            setShowWinModal(true);
-        } else if (vertical) {
-            setShowWinModal(true);
-        }
-
-    }
-
     useEffect(() => {
         setTableCards(handleTable([...BINGO_CARDS]))
     }, [])
 
     useEffect(() => {
+
+        const handleWin = (tableCards: CardProps[][]) => {
+            const horizontal = handleHorizontalWin(tableCards);
+            const vertical = handleVerticalWin(tableCards);
+
+            if (horizontal) {
+                setShowWinModal(true);
+            } else if (vertical) {
+                setShowWinModal(true);
+            }
+
+        }
+
         if (tableCards.length > 0) {
             handleWin(tableCards)
         }
